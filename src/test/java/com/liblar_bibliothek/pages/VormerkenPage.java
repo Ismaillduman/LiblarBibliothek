@@ -12,6 +12,9 @@ public class VormerkenPage {
 
     @FindBy(css = ".btn.btn-primary.placehold")
     public WebElement confirm;
-    @FindBy(xpath = "(//table[@id='holdst']/tbody/tr/td)[1]")
-    public WebElement actualBookName;
+    @FindBy(xpath = "//table[@id='holdst']//a/span[@class='biblio-title']")
+    public WebElement actualBookTitle;
+
+    @FindBy(xpath = "//table[@id='holdst']//a/span[@class='subtitle']")
+    public WebElement actualBookSubtitle;
 }

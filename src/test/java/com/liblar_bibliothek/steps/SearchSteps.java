@@ -4,17 +4,15 @@ import com.liblar_bibliothek.pages.ErgebnissederSuchePage;
 import com.liblar_bibliothek.pages.KatalogPage;
 import com.liblar_bibliothek.pages.StarseitePage;
 import com.liblar_bibliothek.pages.VormerkenPage;
-import com.liblar_bibliothek.utility.BrowserUtil;
 import com.liblar_bibliothek.utility.ConfigurationReader;
 import com.liblar_bibliothek.utility.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+
 
 public class SearchSteps {
 
@@ -78,13 +76,16 @@ public class SearchSteps {
 
         try {
 
-            Assert.assertTrue(ConfigurationReader.getProperty("book_name").contains(vormerken.actualBookName.getText().substring(0, 14)));
-            System.out.println("vormerken.actualBookName.getText() = " + vormerken.actualBookName.getText());
+            System.out.println("vormerken.actualBookName.getText() = " + vormerken.actualBookTitle.getText());
+            Assert.assertTrue(ConfigurationReader.getProperty("book_name").contains(vormerken.actualBookTitle.getText().substring(5)));
+
         } catch (NoSuchElementException e) {
 
 
 
         }
+
+
 
     }
 }

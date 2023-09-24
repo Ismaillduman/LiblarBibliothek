@@ -29,7 +29,7 @@ public class LoginPage extends BasePage {
         userBox.sendKeys(userNumber);
         passwordBox.sendKeys(password);
         anmelden.sendKeys(Keys.ENTER);
-        BrowserUtil.waitFor(3);
+
 
 
 
