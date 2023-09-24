@@ -1,4 +1,4 @@
-package com.library.utility;
+package com.liblar_bibliothek.utility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

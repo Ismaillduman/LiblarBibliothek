@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class LMSCloudPage {
-    public LMSCloudPage(){
+public class StarseitePage {
+    public StarseitePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "(//table[@id='checkoutst']//tbody//tr/td[7])")
