@@ -1,9 +1,9 @@
-@wip
-Feature:As a user I should be able to reservation a book which i want to.
 
+Feature:As a user I should be able to reservation a book which i want to.
+  @wip
   Scenario: Login with valid credentials
-    Given User on the "login page"
-    When User enter valid "credentials" in the input box
+    Given user on the "login page"
+    When user enter valid "credentials" in the input box
     And user click the enter
     Then user on the "Starseite Page"
 
