@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Vormerken {
-    public Vormerken(){
+public class VormerkenPage {
+    public VormerkenPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
