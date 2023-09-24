@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/liblar_bibliothek/steps",
-        dryRun = true,
+        dryRun = false,
         tags = "@wip"
 )
 public class CukesRunner {

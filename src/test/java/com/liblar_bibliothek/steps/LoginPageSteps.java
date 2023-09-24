@@ -1,27 +1,43 @@
 package com.liblar_bibliothek.steps;
 
 
+import com.liblar_bibliothek.pages.LoginPage;
+import com.liblar_bibliothek.utility.BrowserUtil;
+import com.liblar_bibliothek.utility.ConfigurationReader;
+import com.liblar_bibliothek.utility.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class LoginPageSteps {
+    LoginPage loginPage = new LoginPage();
 
-    @Given("user on the {string}")
-    public void user_on_the(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Given("user on the login page")
+    public void userOnTheLoginPage() {
+        //BrowserUtil.scrollToElement(loginPage.Benutzerkonto);
+        loginPage.Benutzerkonto.click();
+        BrowserUtil.waitFor(2);
     }
-    @When("user enter valid {string} in the input box")
-    public void user_enter_valid_in_the_input_box(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("user enter valid user {string} and password {string} in the input box")
+    public void userEnterValidUserAndPasswordInTheInputBox(String userNumber, String password) {
+        userNumber= ConfigurationReader.getProperty("userNum");
+        password=ConfigurationReader.getProperty("password");
+        loginPage.login(userNumber, password);
+
+
     }
-    @When("user click the enter")
-    public void user_click_the_enter() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
+
+    @Then("user on the start page")
+    public void userOnTheStartPage() {
+        Assert.assertEquals("Startseite Ihrer Bibliothek › Stadtbuecherei Erftstadt - Katalog", Driver.getDriver().getTitle());
+
     }
+
 
 
 }
