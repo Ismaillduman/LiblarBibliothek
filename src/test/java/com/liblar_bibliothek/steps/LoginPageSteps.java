@@ -17,6 +17,7 @@ public class LoginPageSteps {
     @Given("user on the login page")
     public void userOnTheLoginPage() {
         //BrowserUtil.scrollToElement(loginPage.Benutzerkonto);
+        BrowserUtil.waitFor(2);
         loginPage.Benutzerkonto.click();
         BrowserUtil.waitFor(2);
     }
