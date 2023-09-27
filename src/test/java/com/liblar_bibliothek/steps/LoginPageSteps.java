@@ -23,8 +23,8 @@ public class LoginPageSteps {
 
     @When("user enter valid user {string} and password {string} in the input box")
     public void userEnterValidUserAndPasswordInTheInputBox(String userNumber, String password) {
-        userNumber= ConfigurationReader.getProperty("userNum");
-        password=ConfigurationReader.getProperty("password");
+//        userNumber= ConfigurationReader.getProperty("userNum");
+//        password=ConfigurationReader.getProperty("password");
         loginPage.login(userNumber, password);
 
 
