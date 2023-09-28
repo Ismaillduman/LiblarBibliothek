@@ -14,7 +14,7 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
-    @FindBy(xpath = "//a[@href='https://sb-erftstadt.lmscloud.net/']")
+    @FindBy(xpath = "(//a/button[@type='button'])[2]")
     public WebElement Benutzerkonto;
 
 
