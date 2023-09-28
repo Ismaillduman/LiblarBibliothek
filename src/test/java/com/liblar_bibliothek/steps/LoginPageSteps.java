@@ -32,6 +32,7 @@ public class LoginPageSteps {
     public void userEnterValidUserAndPasswordInTheInputBox(String userNumber, String password) {
 //        userNumber= ConfigurationReader.getProperty("userNum");
 //        password=ConfigurationReader.getProperty("password");
+        wait= new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         loginPage.login(userNumber, password);
 
 
