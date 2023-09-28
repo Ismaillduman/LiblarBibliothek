@@ -19,7 +19,7 @@ public class KatalogPageSteps {
             }
         }catch (NoSuchElementException e) {
 
-            System.err.println("you have not a available book to extend");
+            System.err.println("There is no suitable book to extend the book rental period.");
 
         }
 
@@ -33,7 +33,7 @@ public class KatalogPageSteps {
             katalogPage.extendButton.click();
         }catch (NoSuchElementException e) {
 
-            System.err.println("you have not a available book to extend");
+            System.err.println("There is no suitable book to extend the book rental period.");
 
         }
 
