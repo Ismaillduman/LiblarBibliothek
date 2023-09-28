@@ -1,5 +1,6 @@
 package com.liblar_bibliothek.steps;
 
+import com.liblar_bibliothek.utility.BrowserUtil;
 import com.liblar_bibliothek.utility.ConfigurationReader;
 import com.liblar_bibliothek.utility.Driver;
 import io.cucumber.java.After;
@@ -16,6 +17,7 @@ public class Hooks {
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Driver.getDriver().manage().window().maximize();
         Driver.getDriver().get(ConfigurationReader.getProperty("bibliothek_url"));
+        BrowserUtil.waitFor(2);
 
     }
 
