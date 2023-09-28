@@ -4,6 +4,11 @@ import com.liblar_bibliothek.utility.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
 /**
  * parent class for concrete Page object classes
  * provides constructor with initElements method for re-usability
@@ -16,6 +21,7 @@ public abstract class BasePage {
     }
     @FindBy(xpath = "(//a/button[@type='button'])[2]")
     public WebElement Benutzerkonto;
+
 
 
 }

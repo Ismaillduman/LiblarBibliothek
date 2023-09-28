@@ -8,10 +8,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LoginPage extends BasePage {
-    public LoginPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public WebDriverWait wait;
+
+    public LoginPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
@@ -24,13 +29,14 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "(//*[@value='Anmelden'])[2]")
     public WebElement anmelden;
 
-    public void login(String userNumber, String password){
+    @FindBy(id="gdpr-cookie-accept")
+    public WebElement cookies;
 
+    public void login(String userNumber, String password) {
+        wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         userBox.sendKeys(userNumber);
         passwordBox.sendKeys(password);
         anmelden.sendKeys(Keys.ENTER);
-
-
 
 
     }
