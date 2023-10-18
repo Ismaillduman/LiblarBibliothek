@@ -1,5 +1,5 @@
 Feature:As a user I should be able to reservation a book which i want to.
-  @wip @ui
+  #@wip @ui
   Scenario Outline: Login with valid credentials and search a book
     Given user on the login page
     When user enter valid user "<user number>" and password "<password>" in the input box

@@ -1,6 +1,6 @@
 Feature: As a user i should be able to extend the book rental period
 
-  @wip @ui
+  #@wip @ui
   Scenario Outline: Extend rental period of book
     Given user on the login page
     When user enter valid user "<user number>" and password "<password>" in the input box
