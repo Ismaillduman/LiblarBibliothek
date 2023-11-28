@@ -2,6 +2,7 @@ package com.liblar_bibliothek.steps;
 
 import com.liblar_bibliothek.pages.KatalogPage;
 import com.liblar_bibliothek.utility.BrowserUtil;
+import com.liblar_bibliothek.utility.Driver;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -34,7 +35,7 @@ public class KatalogPageSteps {
         }catch (NoSuchElementException e) {
 
             System.err.println("There is no suitable book to extend the book rental period.");
-
+            Driver.getDriver().close();
         }
 
 
